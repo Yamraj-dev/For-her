@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: 'Cursive', sans-serif;
+    background-color: #fdf0f6;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #e75480;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+/* Landing Section */
+.landing {
+    background-color: #ffe3ee;
+    padding: 50px 20px;
+}
+
+.landing p {
+    font-size: 1.5em;
+    color: #e75480;
+}
+
+/* Love Letter Section */
+.love-letter {
+    background-color: #fff0f5;
+    padding: 40px;
+    font-size: 1.3em;
+    line-height: 1.8em;
+    color: #555;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.love-letter h2 {
+    color: #e75480;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive; /* Add a romantic font */
+}
+
+.love-letter p {
+    color: #333;
+    text-align: left;
+    font-family: 'Cursive', sans-serif;
+    font-style: italic;
+    padding: 0 20px;
+}
+
+
+/* Proposal Section */
+.proposal {
+    background-color: #fbe7f3;
+}
+
+#yes-btn {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #ff6f91;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+#hearts-animation {
+    position: relative; /* Ensure hearts are contained within this element */
+    height: 200px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Memory Gallery */
+
+.photo-box img {
+    border-radius: 20px;
+    height: 50rem;
+    width: 30rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Heart Animation */
+.heart {
+    position: absolute;
+    bottom: 0;
+    width: 50px; /* Keep a reasonable size for better visibility */
+    height: 50px;
+    background-image: url("./assets/pngwing.com.png"); /* Replace with any heart image */
+    background-size: cover;
+    animation: float 5s ease-in-out forwards;
+    opacity: 0.8;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: scale(0.5) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateY(-200px); /* Ensure the heart moves up enough */
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hearts Animation: Adjust for smaller screens */
+    #hearts-animation {
+        height: 150px; /* Reduced height for mobile */
+    }
+
+    .heart {
+        width: 40px;  /* Smaller hearts on mobile */
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heart {
+        width: 35px; /* Slightly smaller hearts on very small devices */
+        height: 35px;
+    }
+
+    #hearts-animation {
+        height: 120px; /* Reduced height for smaller phones */
+    }
+}
